@@ -89,6 +89,12 @@ public partial class SpawnMenu : Panel
 		UpdateActiveTool();
 	}
 
+	public override void OnButtonEvent( ButtonEvent e )
+	{
+		if ( e.Button == "escape" )
+			open = false;
+	}
+
 	void UpdateActiveTool()
 	{
 		var toolCurrent = ConsoleSystem.GetValue( "tool_current" );
