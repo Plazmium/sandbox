@@ -149,6 +149,7 @@
 	&.active
 	{
 		display: flex;
+        flex-wrap:wrap;
 		opacity: 1;
 	}
 
@@ -156,6 +157,7 @@
 	{
 		overflow: scroll;
 		width: 100%;
+        height:90%;
 		flex-grow: 1;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -210,7 +212,7 @@ spawnmenu .sidebar
 	flex-direction: column;
 	width: 30px;
 	padding: 10px;
-
+	flex: 1;
 	.group
 	{
 		flex-direction: column;
@@ -222,6 +224,15 @@ spawnmenu .sidebar
 		border-radius: 5px;
 		color: white;
 	}
+}
+spawnmenu .search {
+	flex-direction: row;
+	width: 100%;
+	height: 60px;
+	overflow: hidden;
+	background-color: rgb(192, 192, 192,0.1);
+	padding: 10px;
+	border-radius: 5px;
 }
 
 

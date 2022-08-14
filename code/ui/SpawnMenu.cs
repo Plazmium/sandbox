@@ -31,7 +31,7 @@ public partial class SpawnMenu : Panel
 				tabs.AddButtonActive( "Entities", ( b ) => ents.SetClass( "active", b ) );
 
 				var models = body.AddChild<CloudModelList>();
-				tabs.AddButtonActive( "s&works", ( b ) => models.SetClass( "active", b ) );
+				tabs.AddButtonActive( "asset.party", ( b ) => models.SetClass( "active", b ) );
 			}
 		}
 
@@ -76,12 +76,15 @@ public partial class SpawnMenu : Panel
 			} );
 		}
 	}
-
+	bool open = false;
 	public override void Tick()
 	{
 		base.Tick();
-
-		Parent.SetClass( "spawnmenuopen", Input.Down( InputButton.Menu ) );
+		if ( Input.Pressed( InputButton.Menu ) & !open )
+			open = true;
+		else if ( Input.Pressed( InputButton.Menu ) & open )
+			open = false;
+		Parent.SetClass( "spawnmenuopen", open );
 
 		UpdateActiveTool();
 	}

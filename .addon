@@ -1,7 +1,7 @@
 {
-  "Title": "Sandbox Game",
+  "Title": "Sandbox Game with search",
   "Type": "game",
-  "Org": "facepunch",
+  "Org": "plazmium",
   "Ident": "sandbox",
   "Schema": 1,
   "HasAssets": true,

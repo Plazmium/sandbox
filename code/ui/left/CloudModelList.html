@@ -1,13 +1,14 @@
 ﻿
 
 <root class="spawnpage">
-
+	<div class="search">
+		<textentry onchange="RefreshItems()" style="color: white;width: 100%" @value="SearchText" placeholder="" icon="search"></textentry>
+	</div>
 	<div class="sidebar">
 
 		<button onclick="RefreshItems()" icon="refresh"></button>
 
 	</div>
-
 	<VirtualScrollPanel @ref="Canvas" class="canvas"></VirtualScrollPanel>
 
 </root>
