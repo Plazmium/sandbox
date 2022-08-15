@@ -1,5 +1,6 @@
 ﻿using Sandbox;
 using Sandbox.UI;
+using Sandbox.UI.Construct;
 using Sandbox.UI.Tests;
 using System.Threading.Tasks;
 
@@ -24,7 +25,8 @@ public partial class CloudModelList : Panel
 		Canvas.OnCreateCell = ( cell, data ) =>
 		{
 			var file = (Package)data;
-			var panel = cell.Add.Panel( "icon" );
+			var panel = cell.Add.Button( file.Title );
+			panel.AddClass( "icon" );
 			panel.AddEventListener( "onclick", () => ConsoleSystem.Run( "spawn", file.FullIdent ) );
 			panel.Style.BackgroundImage = Texture.Load( file.Thumb );
 		};
