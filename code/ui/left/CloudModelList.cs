@@ -46,11 +46,15 @@ public partial class CloudModelList : Panel
 
 		// TODO - auto add more items here
 	}
+	public void ClearText()
+	{
+		SearchText = "";
+		RefreshItems();
+	}
 
 	public void RefreshItems()
 	{
 		Canvas.Clear();
 		_ = UpdateItems();
 	}
-
 }
