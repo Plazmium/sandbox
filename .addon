@@ -6,7 +6,9 @@
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
-  "ResourcePaths": null,
+  "ResourcePaths": [
+    "/models/*"
+  ],
   "HasCode": true,
   "CodePath": "code",
   "RootNamespace": "Sandbox",
@@ -102,7 +104,7 @@
         }
       ]
     },
-    "GameCategory": "None",
+    "GameCategory": "Sandbox",
     "Physics": {
       "SubSteps": 4,
       "TimeScale": 1,
