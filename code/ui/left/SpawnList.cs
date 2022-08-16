@@ -1,5 +1,6 @@
 ﻿using Sandbox;
 using Sandbox.UI;
+using Sandbox.UI.Construct;
 using Sandbox.UI.Tests;
 
 [Library]
@@ -19,7 +20,14 @@ public partial class SpawnList : Panel
 		Canvas.OnCreateCell = ( cell, data ) =>
 		{
 			var file = (string)data;
-			var panel = cell.Add.Panel( "icon" );
+			var name = file;
+			name = name.Substring( 0, name.IndexOf( "." ));
+			while ( name.IndexOf( '/' ) != -1 )
+			{
+				name = name.Substring( name.IndexOf( '/' ) + 1 );
+			}
+			var panel = cell.Add.Button( name );
+			panel.AddClass( "icon" );
 			panel.AddEventListener( "onclick", () => ConsoleSystem.Run( "spawn", "models/" + file ) );
 			panel.Style.BackgroundImage = Texture.Load( FileSystem.Mounted, $"/models/{file}_c.png", false );
 		};
