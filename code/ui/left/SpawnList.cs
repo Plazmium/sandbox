@@ -21,7 +21,7 @@ public partial class SpawnList : Panel
 		{
 			var file = (string)data;
 			var name = file;
-			name = name.Substring( 0, name.IndexOf( "." ));
+			name = name.Substring( 0, name.IndexOf( "." ) );
 			while ( name.IndexOf( '/' ) != -1 )
 			{
 				name = name.Substring( name.IndexOf( '/' ) + 1 );
