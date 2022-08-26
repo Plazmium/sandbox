@@ -7,7 +7,8 @@
   "HasAssets": true,
   "AssetsPath": "",
   "ResourcePaths": [
-    "/models/*"
+    "/models/*",
+    "/entity/*"
   ],
   "HasCode": true,
   "CodePath": "code",
