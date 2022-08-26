@@ -116,6 +116,9 @@
       "VelocityIterations": 8,
       "SoftBodyIterations": 1,
       "SoftBodySubsteps": 1
+    },
+    "ControlModes": {
+      "Keyboard": true
     }
   }
 }
