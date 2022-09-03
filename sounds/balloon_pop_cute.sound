@@ -2,15 +2,18 @@
 {
 	data = 
 	{
-		sounds = 
-		[
-			"sounds/balloon_pop_cute.vsnd",
-		]
 		UI = false
-		Volume = 1.0
-		VolumeRandom = 0.0
-		Pitch = 1.0
-		PitchRandom = 0.0
-		DistanceMax = 500.0
+		Volume = 1
+		VolumeRandom = 0
+		Pitch = 1
+		PitchRandom = 0
+		Decibels = 70
+		Sounds = 
+		[
+			resource:"sounds/balloon_pop_cute.vsnd",
+		]
+		SelectionMode = "Random"
+		MaximumDistance = 1143.9335
+		MinimumDistance = 57.196674
 	}
 }
