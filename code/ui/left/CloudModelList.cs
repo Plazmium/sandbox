@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 public partial class CloudModelList : Panel
 {
 	public VirtualScrollPanel Canvas { get; set; }
-	public string SearchText { get; set; }
+	public TextEntry TextEntry { get; set; }
 
 	public CloudModelList()
 	{
@@ -41,7 +41,7 @@ public partial class CloudModelList : Panel
 		q.Order = Package.Order.Newest;
 		q.Take = 200;
 		q.Skip = offset;
-		q.SearchText = SearchText;
+		q.SearchText = TextEntry.Text;
 
 		var found = await q.RunAsync( default );
 		Canvas.SetItems( found );
@@ -50,7 +50,7 @@ public partial class CloudModelList : Panel
 	}
 	public void ClearText()
 	{
-		SearchText = "";
+		TextEntry.Text = "";
 		RefreshItems();
 	}
 
